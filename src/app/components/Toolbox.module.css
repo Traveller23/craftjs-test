@@ -1,0 +1,18 @@
+.wrapper {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    outline: var(--color-bg-unimportant) dashed 2px;
+}
+
+.wrapper > * {
+    margin: 1rem 0;
+    text-align: right;
+}
+
+.wrapper > *:first-child {
+    margin-top: 0;
+}
+
+.wrapper > *:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,48 @@
+html {
+    --color-text-default: #B8B8B8;
+    --color-text-less-important: #909090;
+    --color-text-unimportant: #686868;
+    --color-text-highlighted: #D0D0D0;
+    --color-text-warning: #E3AE3B;
+    --color-text-error: #E98983;
+    --color-bg-default: #2B2D2F;
+    --color-bg-less-important: #3C3F41;
+    --color-bg-unimportant: #4D5153;
+    --color-bg-highlighted: #3573F0;
+    --color-bg-warning: #3F3A2B;
+    --color-bg-error: #493635;
+
+    --text-color: var(--color-text-default);
+    --text-color-secondary: var(--color-text-less-important);
+    --primary-color: var(--color-bg-default);
+    --primary-color-text: var(--color-text-default);
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    background-color: var(--color-bg-less-important);
+    color: var(--color-text-default);
+    font-family: var(--font-family);
+}
+
+*:focus {
+    outline: 0;
+}
+
+*::placeholder {
+    color: var(--color-text-unimportant);
+}
+
+input[type="color"] {
+    background-color: var(--color-bg-unimportant);
+    border-color: var(--color-bg-unimportant);
+}
+
+input[type="color"].p-invalid {
+    border-color: var(--color-text-error);
+}
