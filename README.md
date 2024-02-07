@@ -12,3 +12,7 @@ npm run dev
 5. Open the file "data/thousand-buttons.json" in your project.
 6. Copy the content of the file to the text input box in your browser and click the "Load" button.
 7. After waiting a few seconds for those nodes to be loaded, you can see something like `[Violation] 'click' handler took 3539ms` in the console.
+
+![Result: Editor enabled](./doc/image/editor.enabled.gif)  
+
+![Result: Editor disabled](./doc/image/editor.disabled.gif)  
