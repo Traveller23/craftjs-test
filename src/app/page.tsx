@@ -9,6 +9,24 @@ import {Text} from "@/app/components/user/Text";
 import {Button} from "@/app/components/user/Button";
 import styles from "./page.module.css";
 
+const createTestComponents = () => {
+    const components: React.JSX.Element[] = [];
+
+    for (let containerIdx = 0; containerIdx < 10; ++containerIdx) {
+        const items: React.JSX.Element[] = [];
+        for (let itemIdx = 0; itemIdx < 12; ++itemIdx) {
+            items.push(<Button key={itemIdx}/>);
+        }
+        components.push(
+            <Element key={containerIdx} canvas is={Container} style={{minHeight: "3rem"}}>
+                {items}
+            </Element>
+        );
+    }
+
+    return components;
+};
+
 export default function Home() {
     return (
         <div className={styles.wrapper}>
@@ -20,21 +38,8 @@ export default function Home() {
                 <div className={styles.mainArea}>
                     <Toolbox/>
                     <Frame>
-                        <Element canvas is="div" className={styles.frame}>
-                            <Element canvas is={Container} style={{minHeight: "3rem"}}>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                                <Button label="Click me"/>
-                            </Element>
+                        <Element canvas is="div">
+                            {createTestComponents()}
                         </Element>
                     </Frame>
                 </div>
