@@ -45,9 +45,12 @@ export const Topbar = () => {
                                 onClick={() => setDialogVisible(false)}/>
                         <Button label="Load"
                                 onClick={() => {
+                                    const beginTime = performance.now();
                                     setDialogVisible(false);
                                     actions.deserialize(stateToLoad);
                                     toast.current?.show({severity: 'info', summary: 'Info', detail: 'State loaded'});
+                                    const elapsed = (performance.now() - beginTime);
+                                    console.log(`The loading operation took ${elapsed.toFixed(2)} ms`);
                                 }}/>
                     </>}
                     visible={dialogVisible}
